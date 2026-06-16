@@ -1,0 +1,18 @@
+{
+  "name": "ios-dev",
+  "version": "1.0.0",
+  "description": "iOS / Swift developer commands for Claude Code — currently a multi-agent PR code review (/ios-dev:review)",
+  "author": {
+    "name": "wolfspy"
+  },
+  "homepage": "https://github.com/wolfspy/ios-claude-tools",
+  "repository": "https://github.com/wolfspy/ios-claude-tools",
+  "license": "MIT",
+  "keywords": [
+    "code-review",
+    "ios",
+    "swift",
+    "swiftui",
+    "pull-request"
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ios-tools",
+  "owner": {
+    "name": "wolfspy"
+  },
+  "metadata": {
+    "description": "Claude Code tooling for iOS / Swift developers",
+    "homepage": "https://github.com/wolfspy/ios-claude-tools"
+  },
+  "plugins": [
+    {
+      "name": "ios-dev",
+      "source": "./plugins/ios-dev",
+      "description": "iOS / Swift developer commands — currently a multi-agent PR code review (/ios-dev:review), with optional swiftui-pro / swift-testing-pro / swift-concurrency-pro deep dives",
+      "category": "development"
+    },
+    {
+      "name": "swiftui-pro",
+      "source": {
+        "source": "github",
+        "repo": "twostraws/SwiftUI-Agent-Skill",
+        "ref": "main"
+      },
+      "description": "Deep SwiftUI review skill — companion to /review (by Paul Hudson, MIT)",
+      "category": "development"
+    },
+    {
+      "name": "swift-testing-pro",
+      "source": {
+        "source": "github",
+        "repo": "twostraws/Swift-Testing-Agent-Skill",
+        "ref": "main"
+      },
+      "description": "Deep Swift Testing review skill — companion to /review (by Paul Hudson, MIT)",
+      "category": "development"
+    },
+    {
+      "name": "swift-concurrency-pro",
+      "source": {
+        "source": "github",
+        "repo": "twostraws/Swift-Concurrency-Agent-Skill",
+        "ref": "main"
+      },
+      "description": "Deep Swift concurrency review skill — companion to /review (by Paul Hudson, MIT)",
+      "category": "development"
+    }
+  ]
+}

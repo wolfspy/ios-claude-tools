@@ -1,0 +1,73 @@
+# ios-claude-tools
+
+A Claude Code [plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) for iOS / Swift developers.
+
+## What's in here
+
+| Plugin | What it gives you |
+|---|---|
+| **ios-dev** | iOS / Swift developer commands. Currently `/ios-dev:review` — a multi-agent PR code review. More commands will be added to this plugin over time. |
+| **swiftui-pro** ¹ | Deep SwiftUI review skill. `/ios-dev:review` picks it up automatically when present. |
+| **swift-testing-pro** ¹ | Deep Swift Testing review skill. |
+| **swift-concurrency-pro** ¹ | Deep Swift concurrency review skill. |
+
+¹ Sourced from [Paul Hudson](https://github.com/twostraws)'s upstream repos (MIT). They are **optional** — `/ios-dev:review` runs with five core agents on its own, and adds a deeper pass for any of these that happens to be installed.
+
+> Plugin commands are always namespaced as `/<plugin>:<command>`, so the review command is invoked as **`/ios-dev:review`** (never a bare `/review`, which is a built-in command).
+
+## Install (per developer)
+
+```
+/plugin marketplace add wolfspy/ios-claude-tools
+/plugin install ios-dev@ios-tools
+```
+
+Optionally add the deep-dive skills:
+
+```
+/plugin install swiftui-pro@ios-tools
+/plugin install swift-testing-pro@ios-tools
+/plugin install swift-concurrency-pro@ios-tools
+```
+
+## Install (whole team, per project)
+
+Commit this to a project repo's `.claude/settings.json` so everyone who clones and
+trusts the repo is prompted to install the same tooling:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "ios-tools": {
+      "source": { "source": "github", "repo": "wolfspy/ios-claude-tools" }
+    }
+  },
+  "enabledPlugins": {
+    "ios-dev@ios-tools": true,
+    "swiftui-pro@ios-tools": true,
+    "swift-testing-pro@ios-tools": true,
+    "swift-concurrency-pro@ios-tools": true
+  }
+}
+```
+
+## Usage
+
+```
+/ios-dev:review              # reviews the PR for the current branch
+/ios-dev:review 1234         # reviews PR #1234
+/ios-dev:review feature/foo  # reviews the PR for branch feature/foo
+```
+
+## Versioning
+
+`plugins/ios-dev/.claude-plugin/plugin.json` carries a semver `version`. Bump it on
+each release; consumers update with `/plugin update ios-dev@ios-tools`. Pushing commits
+without bumping the version does **not** trigger an update for installed users.
+
+## Adding more commands
+
+New commands live in the same plugin — drop another `.md` file into
+`plugins/ios-dev/commands/` and it becomes `/ios-dev:<command>`. Unrelated tools can
+instead be added as a separate plugin under `plugins/` with its own entry in
+`.claude-plugin/marketplace.json`.
