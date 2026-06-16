@@ -62,8 +62,21 @@ trusts the repo is prompted to install the same tooling:
 ## Versioning
 
 `plugins/ios-dev/.claude-plugin/plugin.json` carries a semver `version`. Bump it on
-each release; consumers update with `/plugin update ios-dev@ios-tools`. Pushing commits
-without bumping the version does **not** trigger an update for installed users.
+each release. Pushing commits without bumping the version does **not** trigger an
+update for installed users.
+
+Consumers update with:
+
+```
+/plugin marketplace update ios-tools
+```
+
+This refreshes the `ios-tools` marketplace and pulls the latest versions of every
+plugin installed from it (`ios-dev` plus any of the Pro skills) in one command —
+there is no per-plugin `/plugin update` command. Run `/reload-plugins` afterwards to
+activate the changes without restarting. Users can also enable auto-update for the
+marketplace (`/plugin` → **Marketplaces** → `ios-tools` → **Enable auto-update**) so
+new versions are pulled automatically at startup.
 
 ## Adding more commands
 
