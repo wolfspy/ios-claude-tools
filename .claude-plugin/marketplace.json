@@ -12,7 +12,7 @@
     {
       "name": "ios-dev",
       "source": "./plugins/ios-dev",
-      "description": "iOS / Swift developer commands — currently a multi-agent PR code review (/ios-dev:review), with optional swiftui-pro / swift-testing-pro / swift-concurrency-pro deep dives",
+      "description": "iOS / Swift developer commands — currently a multi-agent code review (/ios-dev:review) of a PR or local branch diff, with optional swiftui-pro / swift-testing-pro / swift-concurrency-pro deep dives",
       "category": "development"
     },
     {

@@ -1,7 +1,7 @@
 {
   "name": "ios-dev",
   "version": "1.0.0",
-  "description": "iOS / Swift developer commands for Claude Code — currently a multi-agent PR code review (/ios-dev:review)",
+  "description": "iOS / Swift developer commands for Claude Code — currently a multi-agent code review (/ios-dev:review) of a PR or a local (unpushed) branch diff",
   "author": {
     "name": "wolfspy"
   },
