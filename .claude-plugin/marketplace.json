@@ -18,8 +18,9 @@
     {
       "name": "swiftui-pro",
       "source": {
-        "source": "github",
-        "repo": "twostraws/SwiftUI-Agent-Skill",
+        "source": "git-subdir",
+        "url": "https://github.com/twostraws/SwiftUI-Agent-Skill.git",
+        "path": "swiftui-pro",
         "ref": "main"
       },
       "description": "Deep SwiftUI review skill — companion to /review (by Paul Hudson, MIT)",
@@ -28,8 +29,9 @@
     {
       "name": "swift-testing-pro",
       "source": {
-        "source": "github",
-        "repo": "twostraws/Swift-Testing-Agent-Skill",
+        "source": "git-subdir",
+        "url": "https://github.com/twostraws/Swift-Testing-Agent-Skill.git",
+        "path": "swift-testing-pro",
         "ref": "main"
       },
       "description": "Deep Swift Testing review skill — companion to /review (by Paul Hudson, MIT)",
@@ -38,8 +40,9 @@
     {
       "name": "swift-concurrency-pro",
       "source": {
-        "source": "github",
-        "repo": "twostraws/Swift-Concurrency-Agent-Skill",
+        "source": "git-subdir",
+        "url": "https://github.com/twostraws/Swift-Concurrency-Agent-Skill.git",
+        "path": "swift-concurrency-pro",
         "ref": "main"
       },
       "description": "Deep Swift concurrency review skill — companion to /review (by Paul Hudson, MIT)",
