@@ -11,7 +11,7 @@ A Claude Code [plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | **swift-testing-pro** ¹ | Deep Swift Testing review skill. |
 | **swift-concurrency-pro** ¹ | Deep Swift concurrency review skill. |
 
-¹ Sourced from [Paul Hudson](https://github.com/twostraws)'s upstream repos (MIT). They are **optional** — `/ios-dev:review` runs with five core agents on its own, and adds a deeper pass for any of these that happens to be installed.
+¹ Sourced from [Paul Hudson](https://github.com/twostraws)'s upstream repos (MIT). They are **optional** — `/ios-dev:review` runs with seven core agents on its own, and adds a deeper pass for any of these that happens to be installed.
 
 > Plugin commands are always namespaced as `/<plugin>:<command>`, so the review command is invoked as **`/ios-dev:review`** (never a bare `/review`, which is a built-in command).
 
