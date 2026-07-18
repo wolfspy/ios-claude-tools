@@ -6,7 +6,7 @@ A Claude Code [plugin marketplace](https://code.claude.com/docs/en/plugin-market
 
 | Plugin | What it gives you |
 |---|---|
-| **ios-dev** | iOS / Swift developer commands. Currently `/ios-dev:review` — a multi-agent PR code review. More commands will be added to this plugin over time. |
+| **ios-dev** | iOS / Swift developer commands. Currently `/ios-dev:review` — a multi-agent code review of a PR or local branch diff. More commands will be added to this plugin over time. |
 | **swiftui-pro** ¹ | Deep SwiftUI review skill. `/ios-dev:review` picks it up automatically when present. |
 | **swift-testing-pro** ¹ | Deep Swift Testing review skill. |
 | **swift-concurrency-pro** ¹ | Deep Swift concurrency review skill. |
@@ -58,6 +58,10 @@ trusts the repo is prompted to install the same tooling:
 /ios-dev:review 1234         # reviews PR #1234
 /ios-dev:review feature/foo  # reviews the PR for branch feature/foo
 ```
+
+If the current branch has no PR yet (or the repo has no remote), `/ios-dev:review`
+falls back to reviewing the local branch diff against the base branch, including any
+uncommitted changes.
 
 ## Versioning
 
